@@ -11,7 +11,7 @@ if (!isset($argv[1]) || !isset($argv[2]) || !isset($argv[3])) exit();
 $ACCESS_TOKEN=$argv[1];
 $HOSTNAME_KEY=$argv[2];
 $INTERNET_IP=$argv[3];  
-$HOSTNAME_Arr=array("portal","anythingllm","openwebui","litellm","pgadmin4","factory","llmbook","mergekit");
+$HOSTNAME_Arr=array("portal","juicer","anythingllm","openwebui","litellm","pgadmin4","factory","llmbook","mergekit");
 
 # 確認是否能連線成功
 $cmd='curl -X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" -H "Authorization: Bearer '.$ACCESS_TOKEN.'" -H "Content-Type:application/json" |jq';
@@ -34,7 +34,7 @@ $ZONE_ID=$arr["result"][0]["id"];
 # 新增DNS
 for ($i=0;$i<count($HOSTNAME_Arr);$i++){
  $short_ip=substr(str_replace('.','',$INTERNET_IP),-4);
- $short_ip="";
+ $short_ip="2";
  $myDNS=$HOSTNAME_Arr[$i].$short_ip.$HOSTNAME_KEY;   
  $cmd_create_DNS='curl -X POST "https://api.cloudflare.com/client/v4/zones/'.$ZONE_ID.'/dns_records" -H "Authorization: Bearer '.$ACCESS_TOKEN.'" -H "Content-Type: application/json" --data \'{"type":"A","name":"'.$myDNS.'","content":"'.$INTERNET_IP.'","ttl":120,"proxied":false}\'';
  echo shell_exec($cmd_create_DNS);

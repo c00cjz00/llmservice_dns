@@ -179,6 +179,18 @@
                   </div>
                   <div class="post-more"><a class="more-link" href="https://llmbook_nchc.biobank.org.tw">Links</a></div>
                 </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-6">
+                <div class="post mb-20">
+                  <div class="post-thumbnail"><a href="https://juicer_nchc.biobank.org.tw"><img src="assets/images/portfolio/masonry-portfolio11.jpg" alt="GenAI 筆記文本"/></a></div>
+                  <div class="post-header font-alt">
+                    <h2 class="post-title"><a href="https://juicer_nchc.biobank.org.tw">GenAI 資料處理</a></h2>
+                  </div>
+                  <div class="post-entry">
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                  </div>
+                  <div class="post-more"><a class="more-link" href="https://juicer_nchc.biobank.org.tw">Links</a></div>
+                </div>
               </div>			  
             </div>
           </div>

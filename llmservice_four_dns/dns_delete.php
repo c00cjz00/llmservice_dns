@@ -6,7 +6,7 @@ if (!isset($argv[1]) || !isset($argv[2])) exit();
 #$ACCESS_TOKEN="$clouflarekey";
 #$DNS_KEY="_nctu.biobank.org.tw";
 $ACCESS_TOKEN=$argv[1];
-$DNS_KEY=$argv[2];
+$DNS_KEY="2".$argv[2];
 
 # 確認是否能連線成功
 $cmd='curl -X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" -H "Authorization: Bearer '.$ACCESS_TOKEN.'" -H "Content-Type:application/json" |jq';

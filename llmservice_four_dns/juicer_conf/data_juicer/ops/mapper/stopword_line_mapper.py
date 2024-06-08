@@ -1,13 +1,14 @@
 import regex
 import re
 from ..base_op import OPERATORS, Mapper
-
+from typing import Union
 
 @OPERATORS.register_module('stopword_line_mapper')
 class StopwordLineMapper(Mapper):
     """normalize zhtw punctuations"""
 
-    def __init__(self, on_last_k_lines: int | float=8, *args, **kwargs):
+    #def __init__(self, on_last_k_lines: int | float=8, *args, **kwargs):
+    def __init__(self, on_last_k_lines: Union[int, float] = 8, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.stopords = [
             "瀏覽人次",

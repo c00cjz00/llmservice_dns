@@ -25,7 +25,7 @@ vi  env.sample
 - ./01-init.sh $clouflarekey $HOSTNAME $IP [cpu/gpu]
 ```
 clouflarekey="xxxx"
-./01-init.sh $clouflarekey ntuh 211.73.81.102 gpu
+./01-init.sh $clouflarekey nyu 211.73.81.102 gpu
 ``` 
 
 ## Step 4: 啟動服務

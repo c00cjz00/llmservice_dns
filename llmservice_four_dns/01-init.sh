@@ -18,7 +18,7 @@ cp env.sample .env
 # DNS (請修改DNS, INTERNET_IP)
 IP_Tmp="${INTERNET_IP//./}"
 IP=${IP_Tmp: -4}
-IP=""
+IP="2"
 rsync -av nginx_conf/ nginx
 sed -i "s/_nchc.biobank.org.tw/${IP}${DNS}.biobank.org.tw/g" nginx/*conf
 
@@ -68,7 +68,8 @@ fi
 
  
 # Cloudflare 設定 
-DNS_KEY=${IP}${DNS}.biobank.org.tw
+#DNS_KEY=${IP}${DNS}.biobank.org.tw
+DNS_KEY=${DNS}.biobank.org.tw
 php dns_delete.php $Cloudflare_KEY $DNS_KEY
 sleep 10
 php dns_add.php $Cloudflare_KEY $DNS $INTERNET_IP

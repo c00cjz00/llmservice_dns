@@ -12,6 +12,7 @@ process:
   - document_deduplicator: # 16957516
       lowercase: true # whether to convert text to lower case
       ignore_non_character: true
+
   - alphanumeric_filter: # 16957388
       tokenization: false
       min_ratio: 0.10
@@ -25,6 +26,7 @@ process:
       max_ratio: 0.017
   - text_length_filter: # 16954317
       min_len: 10
+
   - document_simhash_deduplicator: # 9873214
       tokenization: character
       window_size: 4  # small window size for short texts

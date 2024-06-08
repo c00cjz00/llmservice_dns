@@ -12,7 +12,7 @@ services:
     container_name: nchc_juicer
     image: datajuicer/data-juicer:v0.2.0
     ports:
-      - ${nchc_juicer}:8501
+      - ${nchc_juicer}:39999
     volumes:
       - ./juicer:/data-juicer
       - ./storage/juicer_cache:/root/.cache
@@ -20,7 +20,8 @@ services:
     networks:
       - nchc     
     working_dir: /data-juicer 
-    command: bash -c "sleep infinity"
+    #command: bash -c "sleep infinity"
+    command: bash -c "pip install notebook && sleep 1 && jupyter notebook --no-browser --allow-root --NotebookApp.token=${SYSTEM_KEY} --notebook-dir=/data-juicer --ip=0.0.0.0 --port=39999"
 
   nchc_factory:
     container_name: nchc_factory
