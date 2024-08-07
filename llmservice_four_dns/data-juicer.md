@@ -1,3 +1,4 @@
+'''
 git clone https://github.com/modelscope/data-juicer.git
 cp -rf data-juiucer-zhtw-main/assets data-juicer/
 cp -rf data-juiucer-zhtw-main/configs/3_008-patent.yaml data-juicer/configs/
@@ -42,3 +43,4 @@ cp -rf data-juiucer-zhtw-main/tools/quality_classifier/extract_result.py data-ju
 cp -rf data-juiucer-zhtw-main/tools/quality_classifier/train.bash data-juicer/tools/
 cp -rf data-juiucer-zhtw-main/tools/rdb data-juicer/tools/
 cp -rf data-juiucer-zhtw-main/tools/unified_jsonl data-juicer/tools/
+'''
