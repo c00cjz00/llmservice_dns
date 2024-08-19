@@ -1,4 +1,4 @@
-'''
+'''bash
 git clone https://github.com/modelscope/data-juicer.git
 cp -rf data-juiucer-zhtw-main/assets data-juicer/
 cp -rf data-juiucer-zhtw-main/configs/3_008-patent.yaml data-juicer/configs/
